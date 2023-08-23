@@ -1,6 +1,7 @@
 .button-container {
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
+    margin: 20px auto;
 }
 
 .button-style { 
@@ -19,6 +20,12 @@
     border-color: rgba(0, 190, 128, 1);
 }
 
+.button-style:active{
+    color: rgba(241, 244, 249, 1);
+    background: rgba(0, 190, 128, 1);
+}
+
+
 .button-style2 { 
     border: 2px solid rgba(241, 244, 249, 1);
     padding: 10px 35px;
@@ -34,4 +41,8 @@
     cursor: pointer;
     transform: scale(1.1);
     border-color: rgba(0, 190, 128, 1);
+}
+.button-style2:active{
+    color: rgba(241, 244, 249, 1);
+    background: rgba(0, 190, 128, 1);
 }
