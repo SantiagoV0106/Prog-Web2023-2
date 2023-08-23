@@ -1,0 +1,35 @@
+.button-container {
+    display: flex;
+    justify-content: space-between
+}
+
+.button-style { 
+    border: 2px solid rgba(241, 244, 249, 1);
+    padding: 5px 10px;
+    color: rgba(0, 190, 128, 1);
+    font-size: 1.2rem;
+    border-radius: 10px;
+    background: none;
+}
+
+.button-style:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    border-color: rgba(0, 190, 128, 1);
+}
+
+.button-style2 { 
+    border: 2px solid rgba(241, 244, 249, 1);
+    padding: 5px 25px;
+    color: rgba(0, 190, 128, 1);
+    font-size: 1.2rem;
+    border-radius: 10px;
+    background: none;
+    margin: 0 15px;
+}
+
+.button-style2:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    border-color: rgba(0, 190, 128, 1);
+}

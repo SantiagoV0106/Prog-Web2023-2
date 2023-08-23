@@ -1,4 +1,4 @@
 export * from './Header'
-export * from './ActionsComp'
-export * from './Counter'
+export * from './Button/Button'
+export * from './Counter/Counter'
 export * from './Footer'

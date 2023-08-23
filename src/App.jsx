@@ -1,17 +1,34 @@
-import React from "react";
-import { Header, Actions, Counter, Footer } from "./components";
+import React, { useState } from "react";
+import { Header, Button, Counter, Footer } from "./components";
 
 export function App() {
- return(
- <>
-    <Header/>
-    <Counter value='10' />
-    <Actions/>
-    <Footer/>
-   
- </>
 
- )    
+   const [contador, setContador] = useState(0)
+
+   const add = () => {
+      setContador(contador + 1)
+   }
+
+   const reset = () => {
+      setContador(0)
+   }
+
+   const subtract = () => {
+      setContador(contador > 0 ? contador - 1 : contador)
+   }
+
+   console.log(contador);
+
+   return (
+      <>
+         <Header />
+         <Counter value={contador} />
+         <Button onAdd={add} onReset={reset} onSubtract={subtract}/>
+         <Footer />
+
+      </>
+
+   )
 
 }
 
