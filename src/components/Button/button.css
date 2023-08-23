@@ -5,10 +5,11 @@
 
 .button-style { 
     border: 2px solid rgba(241, 244, 249, 1);
-    padding: 5px 10px;
+    padding: 10px 20px;
     color: rgba(0, 190, 128, 1);
-    font-size: 1.2rem;
-    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 15px;
     background: none;
 }
 
@@ -20,10 +21,11 @@
 
 .button-style2 { 
     border: 2px solid rgba(241, 244, 249, 1);
-    padding: 5px 25px;
+    padding: 10px 35px;
     color: rgba(0, 190, 128, 1);
-    font-size: 1.2rem;
-    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 15px;
     background: none;
     margin: 0 15px;
 }
