@@ -3,6 +3,10 @@ import { Header, Button, Counter, Footer } from "./components";
 
 export function App() {
 
+   const buttonContainerStyle = {
+      margin: '10px auto'
+  }
+
    const [contador, setContador] = useState(0)
 
    const add = () => {
@@ -23,7 +27,11 @@ export function App() {
       <>
          <Header />
          <Counter value={contador} />
-         <Button onAdd={add} onReset={reset} onSubtract={subtract}/>
+         <div style={buttonContainerStyle}>
+            <Button onClick={subtract} label={'-'} />
+            <Button onClick={reset} label={'Reset'} />
+            <Button onClick={add} label={'+'} />
+         </div>
          <Footer />
 
       </>
