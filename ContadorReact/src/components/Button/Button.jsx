@@ -8,3 +8,5 @@ export function Button ({ onClick, label }) {
 }
 
 // Ya funciona <3
+
+// seguro funciona ?
