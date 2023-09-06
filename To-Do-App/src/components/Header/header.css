@@ -1,0 +1,13 @@
+.header-container{
+    margin-bottom: 20px;
+  }
+  
+  #header-title{
+    color: #ffff;
+    margin: 2px 0;
+  }
+  
+  span {
+    font-size: 400;
+    color: rgba(64, 73, 82, 1);
+  }
