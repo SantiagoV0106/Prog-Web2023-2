@@ -24,5 +24,6 @@ body {
 #no-task-msn {
   text-align: center;
   font-weight: bold;
+  margin: 30px auto;
   color: rgba(64, 73, 82, 1); ;
 }

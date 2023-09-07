@@ -1,5 +1,5 @@
 import React from "react";
-import { Header, Add, Task, Filter } from "./components";
+import { Header, Add, Task, Filter, Footer } from "./components";
 import { useState } from "react";
 
 const initialTask = []
@@ -31,18 +31,18 @@ export function App() {
     ]
 
     const createTask = (title) => {
-     const newTask = {
-            id : crypto.randomUUID(),
+        const newTask = {
+            id: crypto.randomUUID(),
             title,
-            complete : false
+            complete: false
         }
 
-        setTask(prevState => [...prevState, newTask ])
-     
+        setTask(prevState => [...prevState, newTask])
+
     }
 
     const handleToggle = (inputToggle) => {
-        const {id, complete} = inputToggle
+        const { id, complete } = inputToggle
 
         const newTaskInput = task.map(inputToggle => {
 
@@ -56,10 +56,10 @@ export function App() {
             return inputToggle
         })
         setTask(newTaskInput)
-    } 
+    }
 
     const handleDelete = (idDelete) => {
-        const newTasks = task.filter((info)=> info.id !== idDelete)
+        const newTasks = task.filter((info) => info.id !== idDelete)
         setTask(newTasks)
     }
 
@@ -72,22 +72,51 @@ export function App() {
 
     const hasTask = task.length > 0
 
+    const filteredTasks = task.filter((info) => {
+        if (filter === 'completed') {
+            return info.complete
+        }
+
+        if (filter === 'pending') {
+            return !info.complete
+        }
+        else return info
+    })
+
+    const totalTasks = task.length
+    console.log(`Total tasks : ${totalTasks} `);
+
+    const completedTasks = task.filter((info) => {
+        if (info.complete === true) {
+            return info
+        }
+    })
+
+    const cTasksLength = completedTasks.length
+    console.log(`Total completed tasks : ${cTasksLength} `);
+
+
+    const handleAllDelete = () => { 
+        const newTasks = task.filter((info) => info > 0 === initialTask)
+        setTask(newTasks)
+    }
 
     return (
         <>
-         <Header/>
-        <Add onSubmit={createTask} />
-        <Filter data={filterData}
-        onChange={handleFilterChange}
-        currentValue={filter} />
-        {
-            hasTask ? 
-            <Task data={task} 
-            onToggle={handleToggle} 
-            onDelete={handleDelete} 
-            /> :
-            <h1 id="no-task-msn" >No Tasks Yet</h1>
-        }
+            <Header />
+            <Add onSubmit={createTask} />
+            <Filter data={filterData}
+                onChange={handleFilterChange}
+                currentValue={filter} />
+            {
+                hasTask ?
+                    <Task data={filteredTasks}
+                        onToggle={handleToggle}
+                        onDelete={handleDelete}
+                    /> :
+                    <h1 id="no-task-msn" >No Tasks Yet</h1>
+            }
+            <Footer total={totalTasks} completed={cTasksLength} onDeleteAll={handleAllDelete} />
         </>
     )
 }
