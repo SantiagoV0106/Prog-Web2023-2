@@ -1,7 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { Header, CatImg, Catfact, Button } from "./components";
 import { fetchFacts } from "./services/fetchCatFacts";
-import { fetchImgs } from "./services/fetchCatImg";
 
 export function App() {
 
@@ -17,23 +16,22 @@ export function App() {
                 setFact(catFact)
                 const splitedFact = catFact.split(' ')
                 const first4Words = splitedFact.slice(0, 4).join(' ')
-                console.log(first4Words);
                 setWords(first4Words)
             }
 
         ).catch(error => {
             error.error
-        }).then(
-            fetchImgs().then(
-                catImg => {
-                    console.log(catImg);
-                    setImg(catImg)
-                }
-            ).catch(error => {
-                error.error
-            })
-        )
+        })
+
     }, [])
+    
+    useEffect(()=>{
+        console.log(words);
+        const image = (`https://cataas.com/cat/says/${words}`)
+        setImg(image)
+        
+        },[fact])
+  
 
     return (
         <>
