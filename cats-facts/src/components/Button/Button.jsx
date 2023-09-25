@@ -1,11 +1,13 @@
 import React from "react";
 
-export function Button() {
+export function Button({onClick}) {
 
-   
+
     return(
-        <button className="btn-facts">
-            More Cats
+        <button 
+        className="btn-facts"
+        onClick={onClick}>
+            Generate Fact
         </button>
     )
 }
