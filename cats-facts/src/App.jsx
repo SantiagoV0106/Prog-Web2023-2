@@ -1,57 +1,37 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React from "react";
 import { Header, CatImg, Catfact, Button } from "./components";
-import { fetchFacts } from "./services/fetchCatFacts";
+import { fetchFacts } from "./services/useFetch";
+
 
 export function App() {
 
-    const [fact, setFact] = useState('')
-    const [img, setImg] = useState('')
-    const [words, setWords] = useState('')
- 
+    const { data, isLoading, error, img } = fetchFacts()
+    console.log(data);
+    console.log(img);
 
-    useEffect(() => {
-        fetchFacts()
-            .then(catFact => {
-                console.log(catFact);
-                setFact(catFact);
-                const splitedFact = catFact.split(' ');
-                const first4Words = splitedFact.slice(0, 4).join(' ');
-                setWords(first4Words);
-            })
-            .catch(error => {
-                console.error(error);
-            });
-    }, []);
 
-    const handldeClick = useCallback(()=>{
+    if (isLoading) {
+        return (
+            <>
+                <Header />
+                <p>Your Fact is loading...</p>
+            </>
+        )
+    }
 
-        fetchFacts().then(
-            catFact => {
-                        console.log(catFact);
-                        setFact(catFact)
-                        const splitedFact = catFact.split(' ')
-                        const first4Words = splitedFact.slice(0, 4).join(' ')
-                        setWords(first4Words)
-                    }
-                    
-                    ).catch(error => {
-                        error.error
-                    })
-                },[])
-                
-                useEffect(()=>{
-                    console.log(words);
-                    const image = (`https://cataas.com/cat/says/${words}`)
-                    setImg(image)
-                    
-                    },[words])
+    if (error) {
+        return (<p> {error} </p>)
+    }
 
     return (
         <>
             <Header />
-            <CatImg images={img} />
-            <Catfact facts={fact} />
-            <Button onClick={handldeClick} />
+            <main>
+                <CatImg images={img} />
+                <Catfact facts={data} />
+                <Button />
+            </main>
         </>
     )
 }
+// onClick={handldeClick}
