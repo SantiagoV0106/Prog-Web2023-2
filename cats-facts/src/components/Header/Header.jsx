@@ -1,7 +1,8 @@
 import React from "react";
+import './header.css'
 
 export function Header(params) {
     return(
-        <h1>Cat Fact App</h1>
+        <h1>CATFACT</h1>
     )
 }

@@ -10,7 +10,6 @@ export const useApp = () => {
     const [words, setWords] = useState(null)
     
     const handleOnClick = () => {
-        fetchImgData()
         fetchData()
     }
     
