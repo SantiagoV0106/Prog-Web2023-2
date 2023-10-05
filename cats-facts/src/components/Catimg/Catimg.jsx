@@ -1,9 +1,14 @@
 import React from "react";
 import './catimg.css'
-export function CatImg({images}) {
+import { useApp } from "../../hooks/useApp";
+
+export function CatImg() {
+    const {
+        img
+    } = useApp()
     return(
         <div className="img-container">
-            <img src={images} alt="Cat-image" />
+            <img src={img} alt="Cat-image" />
         </div>
     )
 }

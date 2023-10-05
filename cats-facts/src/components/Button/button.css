@@ -1,0 +1,26 @@
+.btn-facts {
+    background-color: transparent;
+    border-radius: 10px;
+    border: 4px solid #272D39;
+    padding: 10px;
+    color: #272D39;
+    transition: 200ms;
+}
+
+.btn-facts:hover {
+    cursor: pointer;
+    background-color: rgba(250, 149, 32, 1);
+    color: #fff;
+}
+
+.btn-facts:active {
+    /* background-color: rgba(250, 149, 32, 1); */
+    color: #fff;
+    transform: scale(0.9);
+}
+
+@media (max-width: 290px) {
+   .btn-facts{
+    transform: scale(0.8);
+   }
+  }
