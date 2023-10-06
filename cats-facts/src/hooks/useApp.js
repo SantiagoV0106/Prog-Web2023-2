@@ -1,6 +1,4 @@
-import { useContext, useEffect } from "react";
-import { fetchFacts } from "../services/fetchCatFact";
-import { fetchImg } from "../services/fetchCatImg";
+import { useContext } from "react";
 import { AppContext } from "../context/AppContext";
 export const useApp = () => {
 
@@ -12,55 +10,50 @@ export const useApp = () => {
 
     const {
         data,
-        setData,
         isLoading,
-        setLoading,
         error,
-        setError,
         img,
-        setImg,
         words,
-        setWords
-        
+        handleOnClick        
     } = context
 
-    const handleOnClick = () => {
-        fetchData()
-    }
+    // const handleOnClick = () => {
+    //     fetchData()
+    // }
 
 
-    const fetchData = () => {
-        setLoading(true)
+    // const fetchData = () => {
+    //     setLoading(true)
 
-        fetchFacts()
-            .then((res) => {
-                setData(res)
-                if (res) {
-                    const wordsArray = res.split(' ').slice(0, 4);
-                    setWords(wordsArray.join(' '));
-                }
-            })
-            .catch((error) => setError(error))
-    }
+    //     fetchFacts()
+    //         .then((res) => {
+    //             setData(res)
+    //             if (res) {
+    //                 const wordsArray = res.split(' ').slice(0, 4);
+    //                 setWords(wordsArray.join(' '));
+    //             }
+    //         })
+    //         .catch((error) => setError(error))
+    // }
 
-    useEffect(() => {
-        fetchData()
-    }, [])
+    // useEffect(() => {
+    //     fetchData()
+    // }, [])
 
-    const fetchImgData = () => {
-        if (words) {
-            fetchImg({ words })
-                .then((img) => {
-                    setImg(img)
-                })
-                .catch((error) => setError(error))
-                .finally(() => setLoading(false))
-        }
-    }
+    // const fetchImgData = () => {
+    //     if (words) {
+    //         fetchImg({ words })
+    //             .then((img) => {
+    //                 setImg(img)
+    //             })
+    //             .catch((error) => setError(error))
+    //             .finally(() => setLoading(false))
+    //     }
+    // }
 
-    useEffect(() => {
-        fetchImgData()
-    }, [words])
+    // useEffect(() => {
+    //     fetchImgData()
+    // }, [words])
 
     return {
         data,

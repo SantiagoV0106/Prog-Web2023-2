@@ -1,5 +1,5 @@
 import React from "react";
-import {Body } from "./components";
+import {Header, Body } from "./components";
 import { AppContextProvider } from "./context/AppContextProvider";
 
 export function App() {
@@ -7,7 +7,8 @@ export function App() {
 
     return (
      <AppContextProvider>
-         <Body/>
+        <Header />
+        <Body/>
      </AppContextProvider>
 
     )

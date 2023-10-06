@@ -1,6 +1,5 @@
 import React from "react";
 import './body.css'
-import { Header } from "../Header/Header";
 import { Catfact } from "../Catfact/Catfact";
 import { CatImg } from "../Catimg/Catimg";
 import { Button } from "../Button/Button";
@@ -18,7 +17,6 @@ export function Body() {
     if (isLoading) {
         return (
             <>
-                <Header />
                 <span className="loader"></span>
                 <p className="loading-msn" >Your Fact is loading...</p>
             </>
@@ -33,7 +31,6 @@ export function Body() {
 
     return (
         <>
-            <Header />
             <CatImg />
             <Catfact />
             <Button />
