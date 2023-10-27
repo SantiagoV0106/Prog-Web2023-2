@@ -1,0 +1,105 @@
+.slogan-container {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.title {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color : #F8F9FA;
+    font-size: 150px;
+    font-weight: 300;
+}
+.effect-container {
+    border: 0.4px solid white;
+    display: inline-flex;
+    height: 150px;
+    padding: 0 10px 20px;
+    position: relative;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.effect-container img {
+    position: absolute;
+    bottom: -160px;
+    left: -120px;
+}
+
+#square-icon {
+    font-size: 20px;
+    position: absolute;
+    top: -10px;
+    left: -8px;
+}
+#square-icon-2 {
+    font-size: 20px;
+    position: absolute;
+    top: -10px;
+    left: 225px;
+}
+#square-icon-3 {
+    font-size: 20px;
+    position: absolute;
+    top: -10px;
+    left: 98%;
+}
+#square-icon-4 {
+    font-size: 20px;
+    position: absolute;
+    bottom: -10px;
+    left: -8px;
+}
+#square-icon-5 {
+    font-size: 20px;
+    position: absolute;
+    bottom: -10px;
+    left: 225px;
+}
+#square-icon-6 {
+    font-size: 20px;
+    position: absolute;
+    bottom: -10px;
+    left: 98%;
+}
+
+.always-container {
+    position: relative;
+}
+
+.pixel-logo {
+    width: 80px;
+    position: absolute;
+    top: 20px;
+}
+
+.sub-container {
+    text-align: center;
+    color: #F8F9FA;
+    width: 45%;
+    padding: 0 20px;
+}
+
+.sub-title{ 
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.p-info {
+    font-size: 22px;
+    font-weight: 300;
+}
+
+.landing-button {
+    margin: 0;
+    padding: 20px 30px;
+    color: #F8F9FA;
+    background-color: transparent;
+    border: 1px solid #F8F9FA;
+    border-radius: 10px;
+}
