@@ -1,0 +1,17 @@
+.contact-us {
+    display: flex;
+    align-items: center;
+    padding: 60px 100px;
+    height: 77vh;
+    justify-content: space-between;
+}
+.title-contactus-container h1{
+margin: 0;
+font-size: 95px;
+}
+.form-contianer form{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: flex-end;
+}

@@ -1,4 +1,4 @@
-import { Header, OurTeam, OurWork, Skills, Slogan, Values } from "../Components"
+import { Footer, Header, OurTeam, OurWork, Skills, Slogan, Values } from "../Components"
 
 export function Landing() {
     return(
@@ -9,6 +9,7 @@ export function Landing() {
         <Skills/>
         <Values/>
         <OurWork/>
+        <Footer/>
         </>
     )
 }

@@ -1,5 +1,11 @@
+import { Footer, LoginForm } from "../Components";
+
 export function LogIn() {
-    return(
-        <h1>Hola desde Log In</h1>
+    return (
+        <>
+            <LoginForm />
+            <Footer />
+        </>
+
     )
 }

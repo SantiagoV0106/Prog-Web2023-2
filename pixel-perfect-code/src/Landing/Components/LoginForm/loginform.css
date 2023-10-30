@@ -1,0 +1,41 @@
+.login-container{
+    display: flex;
+    padding: 60px 100px;
+    /* height: 90vh; */
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left-container {
+    display: flex;
+    flex-direction: column;
+}
+.left-container img {
+    width: 80%;
+    min-width: 30%;
+}
+.left-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+
+
+.button-submit {
+    width: 500px;
+    height: 60px;
+    background-color: #fff;
+    border-radius: 10px;
+    border: none;
+}
+
+.right-container { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-container img {
+    width: 80%;
+}
