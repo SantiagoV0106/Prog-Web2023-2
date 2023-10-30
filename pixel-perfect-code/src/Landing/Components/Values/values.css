@@ -1,0 +1,36 @@
+.values-section { 
+    margin: 0 200px 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#title {
+    font-size: 95px;
+    margin: 0;
+    text-align: center;
+}
+
+#description { 
+    text-align: center;
+    max-width: 40%;
+    margin: 0 0 60px;
+    font-weight: 300;
+    font-size: 20px;
+    padding: 10px 100px;
+}
+
+.values-container {
+    display: flex;
+    gap: 60px;
+}
+
+.value-container {
+    text-align: center;
+    max-width: 280px; 
+    padding: 40px;
+}
+.value-container p {
+ font-weight: 300;
+ font-size: 18px;
+}

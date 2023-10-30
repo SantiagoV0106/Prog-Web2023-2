@@ -32,9 +32,8 @@ export function Slogan() {
                     Unlock the Power of Design with Our Agency
                 </h2>
                 <p className='p-info' >
-                    At <b>PixelPerfect</b>, we are more than just a design agency; we are your partners in creating exceptional web experiences.
-                    With a strong focus on UI design, user research, and UX testing,
-                    we bring your vision to life while ensuring it resonates with your target audience.
+                    At <b>PixelPerfect</b>, we're more than just a design agency; 
+                    we're your partners in creating <b>exceptional</b> web experiences.
                 </p>
             </div>
 

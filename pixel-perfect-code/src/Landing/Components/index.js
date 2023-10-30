@@ -1,0 +1,6 @@
+export * from './Header/Header'
+export * from './Slogan/Slogan'
+export * from './OurTeam/OurTeam'
+export * from './Skills/Skills'
+export * from './Values/Values'
+export * from './OurWork/OurWork'

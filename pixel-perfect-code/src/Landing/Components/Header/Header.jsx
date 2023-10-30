@@ -1,5 +1,6 @@
-import './header.css'
 import headerNavLinks from '../../const/headerNavLinks'
+import { NavLink } from 'react-router-dom'
+import './header.css'
 
 
 export function Header() {
@@ -12,10 +13,12 @@ export function Header() {
             <nav className='nav-container'>
                 <ul className='link-list'>
                     {
-                        headerNavLinks.map(({id, title}) => {
+                        headerNavLinks.map(({ id, title, path }) => {
                             return (
                                 <li key={id} className='links'>
-                                    {title}
+                                    <NavLink to={path}>
+                                        {title}
+                                    </NavLink>
                                 </li>
                             )
                         })

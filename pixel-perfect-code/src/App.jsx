@@ -1,10 +1,9 @@
-import { Header, Slogan } from "./Components"
+import { AppRouter } from "./AppRouter"
 
 function App() {
   return (
     <>
-      <Header />
-      <Slogan />
+   <AppRouter/>
     </>
   )
 }

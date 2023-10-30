@@ -1,0 +1,35 @@
+.work-title-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 200px;
+    align-items: flex-end;
+}
+
+.work-title-container h2 {
+    position: relative;
+    font-size: 95px;
+    font-weight: 300;
+    margin: 0 0 60px;
+}
+
+.work-title-container span {
+    position: absolute;
+    top: 100px;
+    right: 0;
+    width: 250px;
+    height: 2px;
+    border-radius: 100%;
+    background-color: #F8F9FA;
+}
+
+.works-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    margin: 0 200px 180px;
+}
+
+.work-container {
+    border: 1px solid #F8F9FA;
+}
