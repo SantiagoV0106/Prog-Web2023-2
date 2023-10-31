@@ -1,5 +1,8 @@
 .header-container {
     background-color: #080808;
+    position: sticky;
+    top: 0;
+    z-index: 100;
     display: flex;
     align-items: center;
     margin: 10px 0 20px;

@@ -1,7 +1,6 @@
 .login-container{
     display: flex;
     padding: 60px 100px;
-    /* height: 90vh; */
     align-items: center;
     justify-content: space-between;
 }
@@ -20,8 +19,6 @@
     gap: 25px;
 }
 
-
-
 .button-submit {
     width: 500px;
     height: 60px;
@@ -38,4 +35,11 @@
 
 .right-container img {
     width: 80%;
+}
+
+@media (max-width : 1440px) {
+    .right-container img {
+        width: 70%;
+        min-width: 30%;
+    }
 }

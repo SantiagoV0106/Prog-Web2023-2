@@ -1,0 +1,14 @@
+.upload-section {
+    display: flex;
+    align-items: center;
+    padding: 20px 100px;
+    justify-content: space-between;
+    height: 70vh;
+}
+
+.datos-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap : 25px;
+}

@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import { Landing, ContactUs, LogIn } from "../pages";
+import { Landing, ContactUs, LogIn, UploadFilePage } from "../pages";
 
 export function LandingRouter() {
     return(
@@ -15,6 +15,10 @@ export function LandingRouter() {
             <Route
             path='/login'
             element={<LogIn/>} />
+            <Route
+            path="/upload"
+            element={<UploadFilePage/> }
+            />
         </Routes>
     )
 }

@@ -34,3 +34,11 @@
  font-weight: 300;
  font-size: 18px;
 }
+
+@media (max-width : 1440px) {
+    #description {
+        transition: 300ms;
+        max-width: 60%;
+        padding: 10px 80px;
+    }
+}
