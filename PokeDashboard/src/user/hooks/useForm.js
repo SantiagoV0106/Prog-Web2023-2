@@ -18,7 +18,9 @@ export const useForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        navigate('/search')
+        navigate('/search', {
+            state : dashFormSate
+        })
         
     }
 
