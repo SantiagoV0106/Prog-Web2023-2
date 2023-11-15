@@ -1,0 +1,12 @@
+.pokemon-card {
+    cursor: pointer;
+    text-decoration: none;
+    color: rgb(56, 56, 56);
+}
+
+.poke-img-container {
+    width: fit-content;
+}
+.name-container {
+    width: fit-content;
+}

@@ -3,7 +3,7 @@ import { useAuth } from "../hooks/useAuth"
 
 export function PrivateRoute({children}) {
 
-    const {isLogged} = useAuth()
+    const {islogged} = useAuth()
 
-    return isLogged ? children : <Navigate to='/login'/>
+    return islogged ? children : <Navigate to='/'/>
 }

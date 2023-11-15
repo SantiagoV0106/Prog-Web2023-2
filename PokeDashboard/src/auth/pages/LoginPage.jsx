@@ -1,26 +1,46 @@
-import { AuthContextProvider } from "../context/AuthContextProvider";
 import { useForm } from "../hooks/useForm";
 
 export function LoginPage() {
 
-    const {formState,handleOnChange, handleSubmit} = useForm()
+    const { formState, handleOnChange, handleSubmit } = useForm()
 
     return (
-        <AuthContextProvider>
-            <h1>Hola desde Login</h1>
-            <form onSubmit={handleSubmit}>
-                <input type="email"
-                    name="email" id=""
-                    onChange={handleOnChange}
-                    value={formState.email} />
+        <div className="login-container">
+            <div className="glass-effect-container">
+                <div className="img-container">
+                <img src="/poke-logo.png" alt="poke-logo" />
+                </div>
+            
+                    <form className="form-container" onSubmit={handleSubmit}>
 
-                <input type="password"
-                    name="password"
-                    onChange={handleOnChange}
-                    value={formState.password} />
+                        <div className="input-container">
+                            <label
+                                htmlFor="email">Email</label>
+                            <input
+                                type="email"
+                                name="email"
+                                placeholder="Your email address"
+                                onChange={handleOnChange}
+                                value={formState.email} />
+                        </div>
+                        <div className="input-container">
+                            <label
+                                htmlFor="password">Password</label>
+                            <input
+                                type="password"
+                                name="password"
+                                placeholder="Your password"
+                                onChange={handleOnChange}
+                                value={formState.password} />
+                        </div>
 
-                <button type="submit">login</button>
-            </form>
-        </AuthContextProvider>
+                        <div className="end-container">
+                        <button type="submit">Log in</button>
+                        <p>Don`t have an account? <b>Sing up</b> </p>
+                        <p>Forgot password?</p>
+                        </div>
+                    </form>
+            </div>
+        </div>
     )
 }

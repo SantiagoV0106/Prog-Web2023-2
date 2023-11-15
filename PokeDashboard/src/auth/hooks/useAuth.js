@@ -9,16 +9,21 @@ export const useAuth = () => {
     }
 
     const {
-        isLogged,
-        user,
-        logIn
+        islogged,
+        logIn,
+        formState,
+        setFormState,
+        navigate
+
     } = context
 
     return {
 
-        isLogged,
-        user,
-        logIn
+        islogged,
+        logIn,
+        formState, 
+        setFormState,
+        navigate
     }
 
 

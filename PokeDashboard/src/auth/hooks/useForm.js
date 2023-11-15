@@ -1,18 +1,14 @@
 import { useAuth } from "./useAuth"
-import { useState } from "react"
 
 export function useForm() {
     
-    const [formState, setFormState] = useState({
-        email: '',
-        password: ''
-    })
-    
-    const { logIn } = useAuth()
+    const { logIn, navigate, formState, setFormState } = useAuth()
     
     const handleSubmit = (e) => {
         e.preventDefault()
         logIn(formState)
+        navigate('/dashboard')
+
     }
     
     const handleOnChange = ({ target }) => {
@@ -20,7 +16,6 @@ export function useForm() {
             ...formState,
             [target.name] : target.value
         })
-        console.log(target);
     }
 
     return {
