@@ -1,25 +1,76 @@
-#header { 
+#header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 30px;
+    padding: 10px 50px;
     margin: 0 0 20px;
+    max-height: 80px;
     background-color: #fff;
     border-radius: 0 0 20px 2px;
     box-shadow: 0px 4px 20px 0px rgba(44, 113, 184, 0.20);
 }
 
 .logo-container {
-    max-width: 30%;
+    max-width: 100%;
 }
 
 .logo-container img {
-width: 100%;
- max-width: 200px;
- min-width: 80px;
+    width: 100%;
+    max-width: 160px;
+    min-width: 80px;
 }
 
 .user-container {
     display: flex;
     align-items: center;
+    gap: 10px;
+}
+
+.user {
+    color: #545454;
+    font-weight: 600;
+}
+
+.user-img-contianer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-img-contianer img {
+    width: 80%;
+}
+
+#header-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 100ms;
+    font-weight: 600;
+    background-color: transparent;
+    border: 1px solid #bdbdbd;
+    color: #545454;
+    border-radius: 8px;
+    padding: 5px 10px;
+}
+#header-button span {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 600;
+    color: #545454;
+}
+#header-button:active span {
+ color: #fff;
+}
+
+#header-button:hover {
+    cursor: pointer;
+    border-color: #0084FF;
+}
+
+#header-button:active {
+    cursor: pointer;
+    background-color: #0084FF;
+    color: #fff;
 }

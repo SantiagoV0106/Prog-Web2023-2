@@ -1,28 +1,23 @@
 import { useContext } from "react"
-import { AuthContext } from "../../auth/context/AuthContext"
+import { PokeContext } from "../context/PokeContext"
 
 
 
  export const useDash = () => {
-    const context = useContext(AuthContext)
+    const context = useContext(PokeContext)
    
     
     if (!context) {
         throw new Error('Puede que el comp no este en el provider')
     }
 
-    const {pokes, isLoading, dashFormSate, setDashFormSate, pokeId} = context
-
- if (pokes) {
-    console.log(pokes);
- }
-
+    const {pokes, isLoading, pokeId,filterValue, onFilterChange} = context
 
     return {
         pokes,
         isLoading,
-        dashFormSate,
-        setDashFormSate,
-        pokeId
+        pokeId,
+        filterValue,
+        onFilterChange
     }
 }

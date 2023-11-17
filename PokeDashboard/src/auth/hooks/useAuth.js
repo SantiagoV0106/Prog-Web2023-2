@@ -10,9 +10,12 @@ export const useAuth = () => {
 
     const {
         islogged,
+        setIsLogged,
         logIn,
+        logOut,
         formState,
         setFormState,
+        resetInputs,
         navigate
 
     } = context
@@ -20,9 +23,12 @@ export const useAuth = () => {
     return {
 
         islogged,
+        setIsLogged,
         logIn,
+        logOut,
         formState, 
         setFormState,
+        resetInputs,
         navigate
     }
 

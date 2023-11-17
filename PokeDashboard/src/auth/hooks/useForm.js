@@ -1,20 +1,20 @@
 import { useAuth } from "./useAuth"
 
 export function useForm() {
-    
-    const { logIn, navigate, formState, setFormState } = useAuth()
-    
+
+    const { navigate, formState, setFormState,logIn, resetInputs } = useAuth()
+
     const handleSubmit = (e) => {
         e.preventDefault()
-        logIn(formState)
-        navigate('/dashboard')
-
+        navigate('/')
+        logIn()
+        resetInputs()
     }
-    
+
     const handleOnChange = ({ target }) => {
         setFormState({
             ...formState,
-            [target.name] : target.value
+            [target.name]: target.value
         })
     }
 

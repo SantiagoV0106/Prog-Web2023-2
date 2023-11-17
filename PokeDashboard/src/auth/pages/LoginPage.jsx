@@ -1,8 +1,18 @@
+import { Navigate } from "react-router-dom";
+import { useAuth } from "../hooks/useAuth";
 import { useForm } from "../hooks/useForm";
 
-export function LoginPage() {
-
+export function LoginPage() {   
     const { formState, handleOnChange, handleSubmit } = useForm()
+    const {islogged} = useAuth()
+
+    if (islogged) {
+        return(
+            <Navigate to='/'/>
+        )
+    }
+   
+
 
     return (
         <div className="login-container">

@@ -1,35 +1,24 @@
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { LoginPage } from "./auth/pages";
-import { DashBoardPage, ItemDetailPage, SearchPage } from "./user/pages";
-import { PrivateRoute } from "./auth/routes/PrivateRoute";
+import { UserRouter } from "./user/routes/UserRouter";
 
 export function AppRouter() {
     return (
         <main>
             <Routes>
                 <Route
-                    path="/"
+                    path="/login"
                     element={<LoginPage />}
                 />
-                <Route>
-                        <Route
-                            path='/dashboard'
-                            element={
-                                <PrivateRoute>
-                                    <DashBoardPage />
-                                </PrivateRoute>} />
+                <Route
+                
+                path="/*"
+                element={<UserRouter/>}
 
-                        <Route
-                            path='pokemon/:id'
-                            element={<ItemDetailPage />}
-                        />
+                />
+{/* ! hacer pagina 404 */}
 
-                        <Route
-                            path='search'
-                            element={<SearchPage />} />
-                </Route>
-
-                <Route path='*' element={<Navigate to='/dashboard' />} />
+              
 
             </Routes>
         </main>

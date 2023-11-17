@@ -1,33 +1,26 @@
-import { useEffect, useState } from "react"
-import { getPokesById } from "../services/fetchPokes"
-import { useParams } from "react-router-dom"
+import { Header, Loader } from "../components"
+import { useItem } from "../hooks/useItem"
 
 export function ItemDetailPage() {
 
-    const [pokeId, setPokeId] = useState([])
-    const [isLoading, setIsLoading] = useState(true)
-    const { id } = useParams()
-
-
-    useEffect(() => {
-        getPokesById(id)
-            .then((pokemon) => {
-                setPokeId(pokemon)
-            }).finally(() => {
-                setIsLoading(false)
-            })
-    }, [id])
-
+   const {pokeId, isLoading} = useItem()
 
     const { name } = pokeId
 
-    if (isLoading) {
+    if (isLoading) 
+    {
         return (
-            <p>Cargando datos</p>
+            <>
+            <Header/>
+            <Loader/>
+            </>
         )
     }
 
     return (
+        <>
+        <Header/>
         <p> {name} </p>
+        </>
     )
 }

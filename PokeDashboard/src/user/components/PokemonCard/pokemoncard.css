@@ -1,8 +1,212 @@
-.pokemon-card {
-    cursor: pointer;
+.pokemon-card-grass {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     text-decoration: none;
-    color: rgb(56, 56, 56);
+    color: #fff;
+    background-color: var(--color-grass) ;
+    border-radius: 10px;
+    width: 100%;
 }
+.pokemon-card-fire {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--color-fire) ;
+    border-radius: 10px;
+    width: 100%;
+}
+.pokemon-card-water {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--color-water) ;
+    border-radius: 10px;
+    width: 100%;
+}
+.pokemon-card-bug {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--color-bug) ;
+    border-radius: 10px;
+    width: 100%;
+}
+.pokemon-card-normal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--color-normal) ;
+    border-radius: 10px;
+    width: 100%;
+}
+.pokemon-card-poison {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--color-poison) ;
+    border-radius: 10px;
+    width: 100%;
+}
+.pokemon-card-steel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--color-steel) ;
+    border-radius: 10px;
+    width: 100%;
+}
+.pokemon-card-psychic {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--color-psychic) ;
+    border-radius: 10px;
+    width: 100%;
+}
+.pokemon-card-ground {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--color-ground) ;
+    border-radius: 10px;
+    width: 100%;
+}
+.pokemon-card-ice {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--color-ice) ;
+    border-radius: 10px;
+    width: 100%;
+}
+.pokemon-card-flying {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--color-flying) ;
+    border-radius: 10px;
+    width: 100%;
+}
+.pokemon-card-ghost {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--color-ghost) ;
+    border-radius: 10px;
+    width: 100%;
+}
+.pokemon-card-rock {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--color-rock) ;
+    border-radius: 10px;
+    width: 100%;
+}
+.pokemon-card-fighting {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;    
+    color: #fff;
+    background-color: var(--color-fighting) ;
+    border-radius: 10px;
+    width: 100%;
+}
+.pokemon-card-dark {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--color-dark) ;
+    border-radius: 10px;
+    width: 100%;
+}
+.pokemon-card-dragon {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--color-dragon) ;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.pokemon-card-electric {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: var(--color-electric) ;
+    border-radius: 10px;
+    width: 100%;
+}
+.pokemon-card-fairy {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: var(--color-electric) ;
+    border-radius: 10px;
+    width: 100%;
+}
+.pokemon-card-shadow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: var(--color-electric) ;
+    border-radius: 10px;
+    width: 100%;
+}
+.pokemon-card-unknow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: var(--color-electric) ;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.poke-card-404 {
+    border-radius: 10px;
+    width: 100%;
+    background-color: rgb(77, 77, 77);
+    
+}
+
 
 .poke-img-container {
     width: fit-content;

@@ -1,73 +1,46 @@
 import { useNavigate} from "react-router-dom"
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import { AuthContext } from "./AuthContext";
-import { fetchPokes} from "../../user/services/fetchPokes";
 
+const inictialLoggState = JSON.parse(window.localStorage.getItem('islogged')) ?? false
+const initialInputState = {
+    email: '',
+    password: ''
+}
 export function AuthContextProvider({ children }) {
 
     //Auth context hooks
 
-    const [islogged, setIsLogged] = useState(false)
+    const [islogged, setIsLogged] = useState(inictialLoggState)
 
     const navigate = useNavigate()
 
-    const [formState, setFormState] = useState({
-        email: '',
-        password: ''
-    })
+    const [formState, setFormState] = useState(initialInputState)
 
+    const logIn = () => {
+        setIsLogged(true)
+        localStorage.setItem('islogged', JSON.stringify(true))
+    }
+    const logOut = () => {
+        setIsLogged(false)
+        localStorage.setItem('islogged', JSON.stringify(false))
+    }
 
-    // User context hooks
-  
-    const [isLoading, setLoading] = useState(true)
-    const [pokes, setPokes] = useState([])
-    const [dashFormSate, setDashFormSate] = useState({
-        filter : ''
-    })
-
-
-    const limit = 20
-    const offset = 0
-
-    useEffect(() => {
-        fetchPokes({ limit, offset })
-            .then((pokemons) => {
-                setPokes(pokemons)
-            })
-            .finally(()=> {
-                setLoading(false)
-            })
-    }, [])
-
-
-
-    // Auth lógica
-
-    const logIn = (user) => {
-
-        if (user) {
-            setIsLogged(true)
-
-            // navegar a ruta privada (dash)
-
-
-        }
-        console.log(user);
-
+    const resetInputs = () => {
+        setFormState(initialInputState)
     }
 
     return (
         <AuthContext.Provider value={
             {
                 islogged,
+                setIsLogged,
                 logIn,
+                logOut,
                 formState,
                 setFormState,
-                navigate,
-                pokes,
-                isLoading,
-                dashFormSate, 
-                setDashFormSate
+                resetInputs,
+                navigate
             }
         }>
 

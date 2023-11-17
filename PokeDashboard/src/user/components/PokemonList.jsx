@@ -3,14 +3,15 @@ import { PokemonCard } from "./PokemonCard/PokemonCard"
 
 export function PokemonList() {
 
-    const {pokes} =useDash()
+    const { pokes } = useDash()
 
-    return(
+    return (
         <>
-        {
-            pokes.map(pokemon => <PokemonCard pokemon={pokemon} key={pokemon.id}/>)
-            }
-;
+            {
+                pokes.map(pokemon => (<PokemonCard
+                    pokemon={pokemon}
+                    key={pokemon.id} />
+                ))}
         </>
     )
 }
