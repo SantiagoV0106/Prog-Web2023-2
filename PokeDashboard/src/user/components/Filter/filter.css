@@ -1,0 +1,32 @@
+.filter-container {
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px 50px;
+}
+
+.filter-by-gen {
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px 0px rgba(44, 113, 184, 0.20);
+    background-color: #ffff;
+    padding: 5px 20px;
+    gap: 10px;
+}
+
+#filter {
+    border: none;
+    padding: 0 5px;
+}
+
+.filter-by-gen label{
+    display: inline-flex;
+}
+
+.select-options:hover {
+ background-color: var(--type-water);
+}
+
+#filter:hover {
+    cursor: pointer;
+}

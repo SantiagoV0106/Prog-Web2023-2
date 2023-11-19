@@ -16,6 +16,7 @@ const [filterValue, setFilterValue] = useState(1)
 const onFilterChange = (value) =>
 {
     setFilterValue(value)
+    setLoading(true)
 }
 
 useEffect(() => {

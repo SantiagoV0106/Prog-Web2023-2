@@ -1,8 +1,9 @@
 .pokemon-card-grass {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     text-decoration: none;
+    padding : 10px 0;
     color: #fff;
     background-color: var(--color-grass) ;
     border-radius: 10px;
@@ -11,8 +12,9 @@
 .pokemon-card-fire {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     text-decoration: none;
+    padding : 10px 0;
     color: #fff;
     background-color: var(--color-fire) ;
     border-radius: 10px;
@@ -21,8 +23,9 @@
 .pokemon-card-water {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     text-decoration: none;
+    padding : 10px 0;
     color: #fff;
     background-color: var(--color-water) ;
     border-radius: 10px;
@@ -31,8 +34,9 @@
 .pokemon-card-bug {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     text-decoration: none;
+    padding : 10px 0;
     color: #fff;
     background-color: var(--color-bug) ;
     border-radius: 10px;
@@ -41,8 +45,9 @@
 .pokemon-card-normal {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     text-decoration: none;
+    padding : 10px 0;
     color: #fff;
     background-color: var(--color-normal) ;
     border-radius: 10px;
@@ -51,8 +56,9 @@
 .pokemon-card-poison {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     text-decoration: none;
+    padding : 10px 0;
     color: #fff;
     background-color: var(--color-poison) ;
     border-radius: 10px;
@@ -61,8 +67,9 @@
 .pokemon-card-steel {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     text-decoration: none;
+    padding : 10px 0;
     color: #fff;
     background-color: var(--color-steel) ;
     border-radius: 10px;
@@ -71,8 +78,9 @@
 .pokemon-card-psychic {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     text-decoration: none;
+    padding : 10px 0;
     color: #fff;
     background-color: var(--color-psychic) ;
     border-radius: 10px;
@@ -81,8 +89,9 @@
 .pokemon-card-ground {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     text-decoration: none;
+    padding : 10px 0;
     color: #fff;
     background-color: var(--color-ground) ;
     border-radius: 10px;
@@ -91,8 +100,9 @@
 .pokemon-card-ice {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     text-decoration: none;
+    padding : 10px 0;
     color: #fff;
     background-color: var(--color-ice) ;
     border-radius: 10px;
@@ -101,8 +111,9 @@
 .pokemon-card-flying {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     text-decoration: none;
+    padding : 10px 0;
     color: #fff;
     background-color: var(--color-flying) ;
     border-radius: 10px;
@@ -111,8 +122,9 @@
 .pokemon-card-ghost {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     text-decoration: none;
+    padding : 10px 0;
     color: #fff;
     background-color: var(--color-ghost) ;
     border-radius: 10px;
@@ -121,8 +133,9 @@
 .pokemon-card-rock {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     text-decoration: none;
+    padding : 10px 0;
     color: #fff;
     background-color: var(--color-rock) ;
     border-radius: 10px;
@@ -131,8 +144,9 @@
 .pokemon-card-fighting {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    text-decoration: none;    
+    justify-content: space-evenly;
+    text-decoration: none;
+    padding : 10px 0;    
     color: #fff;
     background-color: var(--color-fighting) ;
     border-radius: 10px;
@@ -141,8 +155,9 @@
 .pokemon-card-dark {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     text-decoration: none;
+    padding : 10px 0;
     color: #fff;
     background-color: var(--color-dark) ;
     border-radius: 10px;
@@ -151,8 +166,9 @@
 .pokemon-card-dragon {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     text-decoration: none;
+    padding : 10px 0;
     color: #fff;
     background-color: var(--color-dragon) ;
     border-radius: 10px;
@@ -162,8 +178,9 @@
 .pokemon-card-electric {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     text-decoration: none;
+    padding : 10px 0;
     color: #ffffff;
     background-color: var(--color-electric) ;
     border-radius: 10px;
@@ -172,45 +189,375 @@
 .pokemon-card-fairy {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     text-decoration: none;
+    padding : 10px 0;
     color: #ffffff;
-    background-color: var(--color-electric) ;
+    background-color: var(--color-fairy) ;
     border-radius: 10px;
     width: 100%;
 }
 .pokemon-card-shadow {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     text-decoration: none;
+    padding : 10px 0;
     color: #ffffff;
-    background-color: var(--color-electric) ;
+    background-color: var(--color-shadow) ;
     border-radius: 10px;
     width: 100%;
 }
 .pokemon-card-unknow {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     text-decoration: none;
+    padding : 10px 0;
     color: #ffffff;
-    background-color: var(--color-electric) ;
+    background-color: var(--color-unknow) ;
     border-radius: 10px;
     width: 100%;
 }
 
+/* poke img container style */
+
+.pokemon-grass-container
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius : 50%;
+    background-color : var(--type-grass)
+}
+.pokemon-fire-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius : 50%;
+    background-color : var(--type-fire)
+}
+.pokemon-water-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius : 50%;
+    background-color : var(--type-water)
+}
+.pokemon-bug-container
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius : 50%;
+    background-color : var(--type-bug)
+}
+.pokemon-normal-container 
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius : 50%;
+    background-color : var(--type-normal)
+}
+.pokemon-poison-container 
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius : 50%;
+    background-color : var(--type-poison)
+}
+.pokemon-steel-container
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius : 50%;
+    background-color : var(--type-steel)
+}
+.pokemon-psychic-container
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius : 50%;
+    background-color : var(--type-psychic)
+}
+.pokemon-ground-container 
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius : 50%;
+    background-color : var(--type-ground)
+}
+.pokemon-ice-container
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius : 50%;
+    background-color : var(--type-ice)
+}
+.pokemon-flying-container 
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius : 50%;
+    background-color : var(--type-flying)
+}
+.pokemon-ghost-container
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius : 50%;
+    background-color : var(--type-ghost)
+}
+.pokemon-rock-container
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius : 50%;
+    background-color : var(--type-rock)
+}
+.pokemon-fighting-container 
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius : 50%;
+    background-color : var(--type-fighting)
+}
+.pokemon-dark-container
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius : 50%;
+    background-color : var(--type-dark)
+}
+.pokemon-dragon-container 
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius : 50%;
+    background-color : var(--type-dragon)
+}
+
+.pokemon-electric-container 
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius : 50%;
+    background-color : var(--type-electric)
+}
+.pokemon-fairy-container
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius : 50%;
+    background-color : var(--type-fairy)
+}
+.pokemon-shadow-container 
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius : 50%;
+    background-color : var(--type-shadow)
+}
+.pokemon-unknow-container 
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius : 50%;
+    background-color : var(--type-unknow)
+}
+
+
+/* Types styles */
+
+.types-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.type-grass {
+   background-color: var(--type-grass);
+   border-radius: 5px;
+   padding: 2px 6px;
+   font-weight: 600;
+   margin-right: 10px;
+}
+.type-fire {
+   background-color: var(--type-fire);
+   border-radius: 5px;
+   padding: 2px 6px;
+   font-weight: 600;
+   margin-right: 10px;
+}
+.type-water {
+    background-color: var(--type-water);
+    border-radius: 5px;
+    padding: 2px 6px;
+    font-weight: 600;
+    margin-right: 10px;
+}
+.type-bug {
+    background-color: var(--type-bug);
+    border-radius: 5px;
+    padding: 2px 6px;
+    font-weight: 600;
+    margin-right: 10px;
+}
+.type-normal {
+    background-color: var(--type-normal);
+    border-radius: 5px;
+    padding: 2px 6px;
+    font-weight: 600;
+    margin-right: 10px;
+}
+.type-poison {
+    background-color: var(--type-poison);
+    border-radius: 5px;
+    padding: 2px 6px;
+    font-weight: 600;
+    margin-right: 10px;
+}
+.type-steel {
+    background-color: var(--type-steel);
+    border-radius: 5px;
+    padding: 2px 6px;
+    font-weight: 600;
+    margin-right: 10px;
+}
+.type-psychic {
+    background-color: var(--type-psychic);
+    border-radius: 5px;
+    padding: 2px 6px;
+    font-weight: 600;
+    margin-right: 10px;
+}
+.type-ground {
+    background-color: var(--type-ground);
+    border-radius: 5px;
+    padding: 2px 6px;
+    font-weight: 600;
+    margin-right: 10px;
+}
+.type-ice {
+    background-color: var(--type-ice);
+    border-radius: 5px;
+    padding: 2px 6px;
+    font-weight: 600;
+    margin-right: 10px;
+}
+.type-flying {
+    background-color: var(--type-flying);
+    border-radius: 5px;
+    padding: 2px 6px;
+    font-weight: 600;
+    margin-right: 10px;
+}
+.type-ghost {
+    background-color: var(--type-ghost);
+    border-radius: 5px;
+    padding: 2px 6px;
+    font-weight: 600;
+    margin-right: 10px;
+}
+.type-rock {
+    background-color: var(--type-rock);
+    border-radius: 5px;
+    padding: 2px 6px;
+    font-weight: 600;
+    margin-right: 10px;
+}
+.type-fighting {
+    background-color: var(--type-fighting);
+    border-radius: 5px;
+    padding: 2px 6px;
+    font-weight: 600;
+    margin-right: 10px;
+}
+.type-dark {
+    background-color: var(--type-dark);
+    border-radius: 5px;
+    padding: 2px 6px;
+    font-weight: 600;
+    margin-right: 10px;
+}
+.type-dragon {
+    background-color: var(--type-dragon);
+    border-radius: 5px;
+    padding: 2px 6px;
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.type-electric {
+    background-color: var(--type-electric);
+    border-radius: 5px;
+    padding: 2px 6px;
+    font-weight: 600;
+    margin-right: 10px;
+}
+.type-fairy {
+    background-color: var(--type-fairy);
+    border-radius: 5px;
+    padding: 2px 6px;
+    font-weight: 600;
+    margin-right: 10px;
+}
+.type-shadow {
+    background-color: var(--type-shadow);
+    border-radius: 5px;
+    padding: 2px 6px;
+    font-weight: 600;
+    margin-right: 10px;
+}
+.type-unknow {
+    background-color: var(--type-unknow);
+    border-radius: 5px;
+    padding: 2px 6px;
+    font-weight: 600;
+    margin-right: 10px;
+}
+
 .poke-card-404 {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px 0;
     border-radius: 10px;
     width: 100%;
     background-color: rgb(77, 77, 77);
     
 }
 
-
-.poke-img-container {
-    width: fit-content;
+.poke-card-404 p {
+    color: #fff;
+    font-weight: 600;
 }
-.name-container {
-    width: fit-content;
+
+.poke-card-404 img {
+    max-width: 20%;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width : 1440px) {
+   
 }

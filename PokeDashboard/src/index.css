@@ -23,11 +23,32 @@
 	--color-fairy: #fdb9e9;
 	--color-shadow: #7b62a3;
 	--color-unknow: #757575;
-
+	
 	/* Type colors */
-
+	
+	--type-grass: #3aa88e;
+	--type-fire: #b44c4c;
+	--type-water: #588bbb;
+	--type-bug: #76a83c;
+	--type-normal: #7d8285;
+	--type-poison: #5f0043;
+	--type-steel: #7a9091;
+	--type-psychic: #c75397;
+	--type-ground: #928137;
+	--type-ice: #26a5cc;
+	--type-flying: #2e4eb6;
+	--type-ghost: #333c42;
+	--type-rock: #7a6818;
+	--type-fighting: #aa531c;
+	--type-dark: #4b4b4b;
+	--type-dragon: #a71a1a ;
+	--type-electric: rgb(187, 168, 0);
+	--type-fairy: #d498c2;
+	--type-shadow: #574574;
+	--type-unknow: #999898;
 }
 
 body {
+	background-color: #EFEFEF;
 	height: 100vh;
 }

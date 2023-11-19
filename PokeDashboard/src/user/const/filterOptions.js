@@ -19,5 +19,15 @@ export const options = [
         label : 'Generation 4',
         value : 4
     },
+    {
+        id : 5,
+        label : 'Generation 5',
+        value : 5
+    },
+    {
+        id : 6,
+        label : 'Generation 6',
+        value : 6
+    },
 
 ]

@@ -74,3 +74,15 @@
     background-color: #0084FF;
     color: #fff;
 }
+
+@media (max-width : 425px) {
+    #header {
+        gap: 10px;
+    }
+   .user{
+    display: none;
+   }
+   #header-button p {
+    display: none;
+   }
+}

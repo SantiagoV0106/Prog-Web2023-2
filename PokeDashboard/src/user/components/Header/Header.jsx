@@ -24,7 +24,7 @@ export function Header() {
                 <div className="log-out-contianer">
                     <button id='header-button' onClick={handleOnClick}>
 
-                        Log Out
+                       <p> Log Out</p>
                         <span>
                         <HiOutlineLogout />
                         </span>
