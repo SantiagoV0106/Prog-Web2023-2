@@ -19,7 +19,7 @@
 .left-container span {
     font-size: 24px;
     font-weight: 300;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
 }
 
 .login-title {
@@ -40,6 +40,30 @@
     padding: 20px 25px;
     margin-bottom: 20px;
     color: var(--color-text);
+    font-size: 18px;
+}
+.input-login.error {
+    background-color: transparent;
+    border: 1px solid #BA0016;
+    border-radius: 10px;
+    padding: 20px 25px;
+    margin-bottom: 20px;
+    color: var(--color-text);
+    font-size: 18px;
+}
+
+.error-msg {
+    display: none;
+}
+
+.error-msg.active {
+    transition: all .5s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+    color: #BA0016;
+    margin: 0 0 20px;
     font-size: 18px;
 }
 
@@ -76,8 +100,85 @@
     width: 80%
 }
 
-@media (max-width : 1440px) {
-    .right-container img {
-        min-width: 50%;
+@media screen and (max-width : 1440px ) {
+    .login-container {
+        transition: all .5s ease;
+        margin: 0 0 0 60px;
+    }
+
+}
+@media screen and (max-width : 768px ) {
+    .login-container {
+        transition: all .5s ease;
+        margin: 0 0 0 60px;
+    }
+
+    .left-container img {
+        width: 100%;
+    }
+    .left-container span {
+        font-size: 20px;
+        margin: 0 0 20px;
+    }
+
+    .login-title{
+        font-size: 22px;
+        margin: 0 0 15px;
+    }
+
+    .left-container form {
+        width: auto;
+    }
+
+    .input-login {
+        padding: 15px 25px;
+        font-size: 16px;
+        border-radius: 8px;
+    }
+
+    .input-login.error {
+        padding: 15px 25px;
+        font-size: 16px;
+    }
+
+    #forgot-pass {
+        font-size: 16px;
+    }
+
+    .button-submit {
+        padding: 15px 25px;
+        font-size: 14px;
+    }
+}
+@media screen and (max-width : 425px ) {
+
+    .login-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 10px 50px;
+        height: 100vh;
+    }
+
+    .left-container{
+        width: 100%;
+    }
+
+    .left-container img {
+        width: 100%;
+    }
+
+    .left-container span {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .login-title {
+        font-size: 20px;
+    }
+
+    .right-container{ 
+        display: none;
     }
 }

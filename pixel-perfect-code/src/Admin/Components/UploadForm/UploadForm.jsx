@@ -1,47 +1,38 @@
-import { useState } from "react";
-import { db } from "../../../config/firebase";
-import { addDoc, collection } from 'firebase/firestore'
-// Icons
-import { FaFileUpload } from "react-icons/fa";
+import { useUpload } from "../../hooks/useUpload";
+import { Loader } from "../../../ui/Componets";
 
+// Icons
+import { FaTrash } from "react-icons/fa";
+
+//Styles
 import './uploadform.css'
 
-const initialInputState = ''
 
 export function UploadForm() {
 
-    const [projectName, setProjectName] = useState(initialInputState)
-    const [projectDesc, setProjectDesc] = useState(initialInputState)
-    const [imgUrl, setImgUrl] = useState(initialInputState)
-    const [uxChecked, setIsUxChecked] = useState(false)
-    const [uiChecked, setIsUiChecked] = useState(false)
-    const [webChecked, setIsWebChecked] = useState(false)
+    const {
+        filteredProjects,
+        handleOnSubmit,
+        projectName,
+        setProjectName,
+        projectDesc,
+        setProjectDesc,
+        imgUrl,
+        setImgUrl,
+        uxChecked,
+        setIsUxChecked,
+        uiChecked,
+        setIsUiChecked,
+        webChecked,
+        setIsWebChecked,
+        deleteProject } = useUpload()
+        
 
-    const projectsCollectionRef = collection(db, 'projects')
+    const hasProjects = filteredProjects.length > 0
 
 
-    const handleOnSubmit = (e) => {
-        e.preventDefault()
-        uploadProject()
 
-    }
 
-    const uploadProject = async () => {
-
-        try {
-            await addDoc(projectsCollectionRef, {
-                title: projectName,
-                image: imgUrl,
-                description: projectDesc,
-                uidesign: uiChecked,
-                uxresearch: uxChecked,
-                webdev: webChecked,
-            })
-        } catch (error) {
-            console.error(error);
-        }
-
-    }
     return (
         <section className='upload-section'>
             <div className="datos-container">
@@ -53,7 +44,7 @@ export function UploadForm() {
                         className='inputs-upload'
                         value={projectName}
                         onChange={(e) => setProjectName(e.target.value)}
-                        />
+                    />
                     <textarea
                         name=""
                         id="project-desc"
@@ -77,7 +68,8 @@ export function UploadForm() {
                                 className="inp-cbx"
                                 id="uxresearch"
                                 name="uxresearch"
-                                type="checkbox" 
+                                type="checkbox"
+                                checked={uxChecked}
                                 onChange={(e) => setIsUxChecked(e.target.checked)} />
                             <label
                                 className="cbx"
@@ -97,7 +89,8 @@ export function UploadForm() {
                                 className="inp-cbx"
                                 id="uidesign"
                                 name="uidesign"
-                                type="checkbox" 
+                                type="checkbox"
+                                checked={uiChecked}
                                 onChange={(e) => setIsUiChecked(e.target.checked)} />
                             <label
                                 className="cbx"
@@ -116,7 +109,8 @@ export function UploadForm() {
                                 className="inp-cbx"
                                 id="webdev"
                                 name="webdev"
-                                type="checkbox" 
+                                type="checkbox"
+                                checked={webChecked}
                                 onChange={(e) => setIsWebChecked(e.target.checked)} />
                             <label
                                 className="cbx"
@@ -136,20 +130,20 @@ export function UploadForm() {
                         className='upload-btn'>Upload</button>
                 </form>
             </div>
-            <div className="file-container">
-                <input
-                    type="file"
-                    name="file"
-                    placeholder='Upload project image'
-                    className='file-input'
-                />
-                <label
-                    htmlFor="file"
-                    className="upload-inp-label"
-                >
-                    <FaFileUpload />
-                    <p>Browse Files</p>
-                </label>
+            <div className="dashboard-container">
+                <h2 className="project-dash-title">Porject Dashboard</h2>
+                {
+                    !hasProjects ? <Loader /> :
+
+                        filteredProjects.map(({ title, id }) => {
+                            return (
+                                <div className="project-container" key={id}>
+                                    <h2 className="dash-title" > {title}</h2>
+                                    <button className="delete-btn" onClick={() => deleteProject(id)}> <FaTrash /> </button>
+                                </div>
+                            )
+                        })
+                }
             </div>
         </section>
     )

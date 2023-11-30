@@ -17,7 +17,8 @@ export const useAuth = () => {
         handleEmailChange,
         handlePasswordChange,
         handleOnSubmit,
-        handleLogOut
+        handleLogOut,
+        error
     } = context
 
     return {
@@ -30,6 +31,7 @@ export const useAuth = () => {
         handleEmailChange,
         handlePasswordChange,
         handleOnSubmit,
-        handleLogOut
+        handleLogOut,
+        error
     }
 }

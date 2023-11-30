@@ -1,5 +1,8 @@
 import { useAuth } from '../../hooks/useAuth'
 
+//Icons
+import { MdError } from "react-icons/md";
+
 //Styles
 import './loginform.css'
 
@@ -10,7 +13,8 @@ export function LoginForm() {
         handleOnSubmit,
         handlePasswordChange,
         email,
-        password } = useAuth()
+        password,
+        error } = useAuth()
 
 
     // tester@gmail.com tester123
@@ -30,7 +34,7 @@ export function LoginForm() {
                         type='email'
                         name='email'
                         placeholder='Email'
-                        className='input-login'
+                        className={`input-login ${error? 'error' : ''}`}
                         onChange={handleEmailChange}
                         value={email} />
 
@@ -38,10 +42,11 @@ export function LoginForm() {
                         type='password'
                         name='password'
                         placeholder='Password'
-                        className='input-login'
+                        className={`input-login ${error? 'error' : ''}`}
                         onChange={handlePasswordChange}
                         value={password} />
 
+                    <span className={`error-msg ${error? 'active' : ''}`}> <MdError/> Invalid email or password</span>
                     <span id='forgot-pass'>Forgot my password</span>
                     <button
                         className='button-submit'

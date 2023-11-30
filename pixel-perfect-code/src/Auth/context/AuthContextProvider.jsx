@@ -16,6 +16,10 @@ export function AuthContextProvider({ children }) {
     const [password, setPassword] = useState('')
 
 
+// Error state 
+    const [error, setError] = useState(null)
+
+
     // admin auth :  tester@gmail.com tester123
 
     const handleEmailChange = ({ target }) => {
@@ -35,13 +39,19 @@ export function AuthContextProvider({ children }) {
             navigate('/admin/upload')
         }
         catch (error) {
-            console.error(error);
+            setError(error)
         }
     }
     
     const handleOnSubmit = (e) => {
         e.preventDefault()
         logIn()
+        restInputs()
+    }
+
+    const restInputs = () => {
+        setEmail('')
+        setPassword('')
     }
     
     // logout logic 
@@ -68,7 +78,8 @@ export function AuthContextProvider({ children }) {
             handleEmailChange,
             handlePasswordChange,
             handleOnSubmit,
-            handleLogOut
+            handleLogOut,
+            error
         }
 
         }>

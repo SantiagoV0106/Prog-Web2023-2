@@ -5,8 +5,8 @@ export function ContactUsForm() {
     return (
         <section className='contact-us'>
             <div className="title-contactus-container">
-                <h1>Contact <span>
-                    Us</span></h1>
+                <h2>Contact <span>
+                    Us</span></h2>
                 <p>Contact us today and lets create something extraordinary together!</p>
             </div>
                 <form className='contact-us-form'>

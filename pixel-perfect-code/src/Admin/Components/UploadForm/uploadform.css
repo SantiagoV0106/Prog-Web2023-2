@@ -1,219 +1,355 @@
 .upload-section {
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 80vh;
-    margin: 0 180px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80vh;
+  margin: 0 180px;
 
 }
 
 .datos-container {
-    width: fit-content;
+  width: fit-content;
 }
 
-.datos-container h1  {
-   font-size: 50px;
-   margin: 0 0 40px;
+.datos-container h1 {
+  font-size: 50px;
+  margin: 0 0 40px;
 }
 
 .datos-container form {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 450px;
-    gap : 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 450px;
+  gap: 20px;
 }
 
-.inputs-upload { 
-    background-color: transparent;
-    border: 1px solid var(--color-text);
-    border-radius: 10px;
-    padding: 20px 25px;
-    width: calc(100% - 10px );
-    color: var(--color-text);
-    font-size: 18px;
+.inputs-upload {
+  background-color: transparent;
+  border: 1px solid var(--color-text);
+  border-radius: 10px;
+  padding: 20px 25px;
+  width: calc(100% - 10px);
+  color: var(--color-text);
+  font-size: 18px;
 }
 
-#project-desc{
-    background-color: transparent;
-    border-radius: 10px;
-    padding: 20px;
-    width: 100%;
-    color: var(--color-text);
-    border: 1px solid var(--color-text);
-    font-family: 'Lato', sans-serif; 
-    font-size: 18px;
+#project-desc {
+  background-color: transparent;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  color: var(--color-text);
+  border: 1px solid var(--color-text);
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
 }
 
 #project-desc::placeholder {
-    font-size: 18px;
-    font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  font-family: 'Lato', sans-serif;
 }
 
 .upload-btn {
-    cursor: pointer;
-    background-color: var(--button-secondary);
-    border: 1px solid var(--button-primary);
-    border-radius: 10px;
-    padding: 15px 45px;
-    color: var(--color-text);
-    font-size: 16px;
-    font-weight: 500;
+  cursor: pointer;
+  background-color: var(--button-secondary);
+  border: 1px solid var(--button-primary);
+  border-radius: 10px;
+  padding: 15px 45px;
+  color: var(--color-text);
+  font-size: 16px;
+  font-weight: 500;
 
 }
 
-.file-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40%;
-    height: 60%;
+.file-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  height: 60%;
 }
 
 
 .upload-inp-label {
-    border: 2px dashed var(--button-primary);
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 80px;
-    color: var(--button-primary);
-    cursor: pointer;
+  border: 2px dashed var(--button-primary);
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 80px;
+  color: var(--button-primary);
+  cursor: pointer;
 }
-.upload-inp-label p{
-    font-size: 24px;
-    border-bottom: 1px solid var(--color-text);
-    color: var(--color-text);
+
+.upload-inp-label p {
+  font-size: 24px;
+  border-bottom: 1px solid var(--color-text);
+  color: var(--color-text);
 }
 
 .checkboxes-container {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
 }
 
 .checkbox-wrapper-4 * {
-    box-sizing: border-box;
-    color: var(--color-text);
-  }
-  
+  box-sizing: border-box;
+  color: var(--color-text);
+}
+
+.checkbox-wrapper-4 .cbx {
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  padding: 6px 8px;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+.checkbox-wrapper-4 .cbx:not(:last-child) {
+  margin-right: 6px;
+}
+
+.checkbox-wrapper-4 .cbx:hover {
+  background: rgba(0, 119, 255, 0.06);
+}
+
+.checkbox-wrapper-4 .cbx span {
+  float: left;
+  vertical-align: middle;
+  transform: translate3d(0, 0, 0);
+}
+
+.checkbox-wrapper-4 .cbx span:first-child {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  transform: scale(1);
+  border: 1px solid var(--color-text);
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 1px rgba(0, 16, 75, 0.05);
+}
+
+.checkbox-wrapper-4 .cbx span:first-child svg {
+  position: absolute;
+  top: 3px;
+  left: 2px;
+  fill: none;
+  stroke: var(--color-text);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 16px;
+  stroke-dashoffset: 16px;
+  transition: all 0.3s ease;
+  transition-delay: 0.1s;
+  transform: translate3d(0, 0, 0);
+}
+
+.checkbox-wrapper-4 .cbx span:last-child {
+  padding-left: 8px;
+  line-height: 18px;
+}
+
+.checkbox-wrapper-4 .cbx:hover span:first-child {
+  border-color: var(--button-primary);
+}
+
+.checkbox-wrapper-4 .inp-cbx {
+  position: absolute;
+  visibility: hidden;
+}
+
+.checkbox-wrapper-4 .inp-cbx:checked+.cbx span:first-child {
+  background: var(--button-primary);
+  border-color: var(--button-primary);
+  animation: wave-4 0.4s ease;
+}
+
+.checkbox-wrapper-4 .inp-cbx:checked+.cbx span:first-child svg {
+  stroke-dashoffset: 0;
+}
+
+.checkbox-wrapper-4 .inline-svg {
+  position: absolute;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
+
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  height: 60vh;
+}
+
+.project-container {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  width: 50%;
+  border: 1px solid var(--color-text);
+  border-radius: 10px;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+}
+
+.delete-btn {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  color: #EE1139;
+}
+
+.project-dash-title {
+  font-size: 30px;
+  margin: 0 0 30px;
+}
+
+.dash-title {
+  margin: 10px 0;
+  font-size: 26px;
+}
+
+@media screen and (max-width: 640px) {
   .checkbox-wrapper-4 .cbx {
-    -webkit-user-select: none;
-    user-select: none;
-    cursor: pointer;
-    padding: 6px 8px;
-    border-radius: 6px;
-    overflow: hidden;
-    transition: all 0.2s ease;
+    width: 100%;
     display: inline-block;
   }
-  
-  .checkbox-wrapper-4 .cbx:not(:last-child) {
-    margin-right: 6px;
+}
+
+@-moz-keyframes wave-4 {
+  50% {
+    transform: scale(0.9);
   }
-  
-  .checkbox-wrapper-4 .cbx:hover {
-    background: rgba(0,119,255,0.06);
+}
+
+@-webkit-keyframes wave-4 {
+  50% {
+    transform: scale(0.9);
   }
-  
-  .checkbox-wrapper-4 .cbx span {
-    float: left;
-    vertical-align: middle;
-    transform: translate3d(0, 0, 0);
+}
+
+@-o-keyframes wave-4 {
+  50% {
+    transform: scale(0.9);
   }
-  
-  .checkbox-wrapper-4 .cbx span:first-child {
-    position: relative;
-    width: 18px;
-    height: 18px;
-    border-radius: 4px;
-    transform: scale(1);
-    border: 1px solid var(--color-text);
-    transition: all 0.2s ease;
-    box-shadow: 0 1px 1px rgba(0,16,75,0.05);
+}
+
+@keyframes wave-4 {
+  50% {
+    transform: scale(0.9);
   }
-  
-  .checkbox-wrapper-4 .cbx span:first-child svg {
-    position: absolute;
-    top: 3px;
-    left: 2px;
-    fill: none;
-    stroke: var(--color-text);
-    stroke-width: 2;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke-dasharray: 16px;
-    stroke-dashoffset: 16px;
-    transition: all 0.3s ease;
-    transition-delay: 0.1s;
-    transform: translate3d(0, 0, 0);
+}
+
+@media screen and (max-width : 1400px) {
+  .upload-section {
+    transition: all .5s ease;
+    margin: 0 100px;
   }
+}
+@media screen and (max-width : 1000px) {
   
-  .checkbox-wrapper-4 .cbx span:last-child {
-    padding-left: 8px;
-    line-height: 18px;
+
+  .inputs-upload {
+    width: 80%;
   }
+
+  #project-desc {
+    width: 80%;
+  }
+  .dash-title {
+    font-size: 20px;
+  }
+
+}
+@media screen and (max-width : 768px) {
   
-  .checkbox-wrapper-4 .cbx:hover span:first-child {
-    border-color: var(--button-primary);
+  .upload-section {
+ margin: 0 50px;
   }
+
+
+  .datos-container {
+    width: 60%;
+  }
+
+  .inputs-upload {
+    width: 50%;
+  }
+
+  .checkboxes-container {
+    gap: 10px;
+  }
+
+  .datos-container h1 {
+    font-size: 34px;
+  }
+
+  #project-desc {
+    width: 50%;
+  }
+  .dash-title {
+    font-size: 16px;
+  }
+
+  .delete-btn {
+    font-size: 16px;
+  }
+
+}
+@media screen and (max-width : 425px) {
   
-  .checkbox-wrapper-4 .inp-cbx {
-    position: absolute;
-    visibility: hidden;
+  .upload-section {
+ margin: 0;
+ flex-direction: column;
+ height: 100vh;
   }
-  
-  .checkbox-wrapper-4 .inp-cbx:checked + .cbx span:first-child {
-    background: var(--button-primary);
-    border-color: var(--button-primary);
-    animation: wave-4 0.4s ease;
+
+  .datos-container form {
+    width: 100%;
   }
-  
-  .checkbox-wrapper-4 .inp-cbx:checked + .cbx span:first-child svg {
-    stroke-dashoffset: 0;
+
+  .inputs-upload {
+    font-size: 14px;
+    width: 80%;
+    padding: 15px 20px;
   }
-  
-  .checkbox-wrapper-4 .inline-svg {
-    position: absolute;
-    width: 0;
-    height: 0;
-    pointer-events: none;
-    user-select: none;
+
+  #project-desc {
+    width: 80%;
   }
-  
-  @media screen and (max-width: 640px) {
-    .checkbox-wrapper-4 .cbx {
-      width: 100%;
-      display: inline-block;
-    }
+
+  .checkboxes-container {
+    
+    flex-direction: column;
+    align-items: flex-start;
   }
-  
-  @-moz-keyframes wave-4 {
-    50% {
-      transform: scale(0.9);
-    }
+
+  .project-dash-title {
+    font-size: 24px;
+    margin: 40px 0;
+    text-align: center;
   }
-  
-  @-webkit-keyframes wave-4 {
-    50% {
-      transform: scale(0.9);
-    }
-  }
-  
-  @-o-keyframes wave-4 {
-    50% {
-      transform: scale(0.9);
-    }
-  }
-  
-  @keyframes wave-4 {
-    50% {
-      transform: scale(0.9);
-    }
-  }
+
+.delete-btn {
+  padding: 10px;
+  font-size: 14px;
+}  
+
+}

@@ -18,7 +18,6 @@ export function Header() {
 
     const navigate = useNavigate()
     const location = useLocation()
-    console.log(location.pathname);
 
   useEffect(() => {
     const handleResize = () => {
@@ -56,6 +55,7 @@ export function Header() {
                     })
                 }
             </div>
+            <button onClick={handleLogOut} className={ `logout-btn ${location.pathname === '/admin/upload'? 'show' : ''} ` } >Log Out</button>
             <button
                 onClick={handleOnClick}
                 className={`nav-btn ${active ? 'active' : ''}`}
@@ -69,7 +69,6 @@ export function Header() {
                 <IoCloseOutline/>
             </button>
             <div className={`initial ${active ? 'active' : ''} `}></div>
-            <button onClick={handleLogOut} className={ `logout-btn ${location.pathname === '/admin/upload'? 'show' : ''} ` } >Log Out</button>
         </header>
     )
 }
