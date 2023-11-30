@@ -9,6 +9,7 @@ export const useProject = () => {
     console.log(id);
 
     const [project, setProject] = useState(null)
+    const [isLoading, setIsLoading] = useState(true)
 
     useEffect(()=> {
 
@@ -24,8 +25,10 @@ export const useProject = () => {
                     setProject(projectSnap.data())
 
                 } else {
-                    console.log('paila');
+                    console.log('Error');
                 }
+
+                setIsLoading(false)
     
             } catch (error) {
                 console.error(error);
@@ -38,7 +41,8 @@ export const useProject = () => {
     },[id])
 
     return {
-        project
+        project,
+        isLoading
     }
   
 }

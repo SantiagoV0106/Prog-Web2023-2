@@ -5,9 +5,9 @@ import { useProject } from "../hooks/useProject";
 
 export function ProjecDetailPage() {
 
-    const { project } = useProject()
+    const { project, isLoading } = useProject()
 
-    if (!project) {
+    if (isLoading) {
         return (
             <Loader />
         )

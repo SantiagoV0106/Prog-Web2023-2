@@ -181,11 +181,7 @@ a {
         z-index: -1;
         transition: all .6s ease;
     }
-
-    .logout-btn {
-        display: flex;
-        z-index: -2;
-    }
+    
     .initial.active {
         top: -10px;
         left: 0;
