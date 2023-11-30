@@ -1,20 +1,33 @@
-import { Inputs } from '../../../ui/Componets/Inputs/Inputs'
+
 import './contactusform.css'
 
 export function ContactUsForm() {
-    return(
-        <main className='contact-us'>
+    return (
+        <section className='contact-us'>
             <div className="title-contactus-container">
                 <h1>Contact <span>
                     Us</span></h1>
-                    <p>Contact us today and lets create something extraordinary together!</p>
+                <p>Contact us today and lets create something extraordinary together!</p>
             </div>
-        <div className="form-contianer">
-            <form>
-        <Inputs/>
-            <button type="submit">Submit</button>
-            </form>
-        </div>
-        </main>
+                <form className='contact-us-form'>
+                    <input 
+                    type="text" 
+                    name="name" 
+                   
+                    placeholder='Name' />
+                    <input 
+                    type="email"
+                    name="email"
+                   
+                    placeholder='Email' />
+                    <textarea 
+                    name="brief" 
+                    id="brief" 
+                    cols="30" 
+                    rows="10"
+                    placeholder='Short Brief description'/>
+                    <button type="submit" id='btn-contactus'>Submit</button>
+                </form>
+        </section>
     )
 }

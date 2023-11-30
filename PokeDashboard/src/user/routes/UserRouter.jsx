@@ -8,6 +8,7 @@ export function UserRouter() {
 
     return (
         <PokeContextProvider>
+            
             <Routes>
                 <Route
                     path='/'
@@ -22,8 +23,10 @@ export function UserRouter() {
                     path='/pokemon/:id'
                     element={<ItemDetailPage />}
                 />
+
                 <Route path='/*' element={<></>} />
             </Routes>
+            
         </PokeContextProvider>
 
     )

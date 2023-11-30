@@ -1,8 +1,20 @@
-import { Link } from 'react-router-dom'
-import { Inputs } from '../../../ui/Componets/Inputs/Inputs'
+import { useAuth } from '../../hooks/useAuth'
+
+//Styles
 import './loginform.css'
 
 export function LoginForm() {
+
+    const {
+        handleEmailChange,
+        handleOnSubmit,
+        handlePasswordChange,
+        email,
+        password } = useAuth()
+
+
+    // tester@gmail.com tester123
+
     return (
         <main className='login-container'>
             <div className="left-container">
@@ -10,21 +22,37 @@ export function LoginForm() {
                 <span>
                     Welcome Back Designer!
                 </span>
-                <h2>
+                <h2 className='login-title'>
                     Log In
                 </h2>
-                <form>
-                   <Inputs type='text' placeholder='Email' />
-                   <Inputs type='password' placeholder='Password'/>
-                    <span>Forgot my password</span>
-                    <Link to='/upload' >
-                    <button className='button-submit' type="submit">Continue to PixelPerfect</button>
-                    </Link>
+                <form onSubmit={handleOnSubmit}>
+                    <input
+                        type='email'
+                        name='email'
+                        placeholder='Email'
+                        className='input-login'
+                        onChange={handleEmailChange}
+                        value={email} />
+
+                    <input
+                        type='password'
+                        name='password'
+                        placeholder='Password'
+                        className='input-login'
+                        onChange={handlePasswordChange}
+                        value={password} />
+
+                    <span id='forgot-pass'>Forgot my password</span>
+                    <button
+                        className='button-submit'
+                        type="submit">
+                        Continue to PixelPerfect
+                    </button>
                 </form>
             </div>
-                <div className="right-container">
-                    <img src="/pixelLogo.svg" alt="Pixel Logo" />
-                </div>
+            <div className="right-container">
+                <img src="/pixelLogo.svg" alt="Pixel Logo" />
+            </div>
         </main>
     )
 }

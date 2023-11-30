@@ -17,7 +17,7 @@ export function Skills() {
                         const containerClass = impar ? 'par-container' : 'impar-container'
                         return(
                             <div key={id} className={containerClass} >
-                                <p>{icon}</p>
+                                <img src={icon} alt={icon} />
                                 <h3>{title}</h3>
                                 <p>{desc}</p>
                             </div>

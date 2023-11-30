@@ -1,11 +1,16 @@
-import { Header } from "../../ui/Componets/Header/Header"
-import { Slogan } from "../Components"
+import { Header, Footer } from "../../ui/Componets"
+import { OurTeam, OurWork, Skills, Slogan, Values } from "../Components"
 
 export function Landing() {
     return (
         <>
             <Header />
-            <Slogan/>
+            <Slogan />
+            <OurTeam />
+            <Skills />
+            <Values/>
+            <OurWork/>
+            <Footer/>
         </>
     )
 }

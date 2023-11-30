@@ -4,6 +4,7 @@ import { useItem } from "../hooks/useItem"
 export function ItemDetailPage() {
 
     const { pokeId, isLoading } = useItem()
+    
     console.log(pokeId);
 
     const {

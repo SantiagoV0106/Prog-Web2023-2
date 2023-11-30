@@ -27,6 +27,8 @@ useEffect(() => {
    })
 }, [filterValue])
 
+
+
     return(
         <PokeContext.Provider value={{
             pokes,

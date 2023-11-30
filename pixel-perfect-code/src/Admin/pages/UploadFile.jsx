@@ -1,10 +1,12 @@
+import { Header } from "../../ui/Componets/Header/Header";
 import { UploadForm } from "../Components";
 
 
 export function UploadFilePage() {
-    return(
+    return (
         <>
-       <UploadForm/>
+            <Header />
+            <UploadForm />
         </>
     )
 }

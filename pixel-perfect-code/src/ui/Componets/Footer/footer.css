@@ -1,10 +1,84 @@
 #footer {
-    background-color: #F8F9FA;
+    padding: 20px 100px;
+    background-color: var(--color-text);
+}
+
+.deco-line {
+    margin: 0 auto; 
+    height: 1px;
+    border-radius: 10px;
+    opacity: 20%;
+    width: 100%;
+    background-color: var(--color-bg);
 }
 
 #footer p {
     margin: 0;
-    padding: 20px 100px;
-    font-weight: lighter;
-    color: #080808;
+    padding: 20px 0;
+    font-weight: 300;
+    font-size: 18px;
+    color: var(--color-bg);
+    display: flex;
+    align-items: center;
 }
+
+#footer span {
+    margin-left: 20px;
+}
+
+.accounts-container {
+ display: none;
+}
+
+.account-icon {
+    color: var(--color-bg);
+    font-size: 50px;
+    opacity: 70%;
+}
+
+@media screen and (max-width : 768px) {
+
+    #footer {
+        padding: 20px 30px;
+    }
+
+    #footer p {
+        padding: 20px 0 0;
+        font-size: 16px;
+        justify-content: space-between;
+    }
+
+    .accounts-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        margin: 20px auto;
+    }
+
+    .account-icon {
+        color: var(--color-bg);
+        font-size: 30px ;
+    }
+
+}
+
+
+@media screen and (max-width : 425px) {
+
+    #footer {
+        padding: 20px 30px;
+    }
+
+    #footer p {
+        padding: 20px 0 0;
+        font-size: 16px;
+    }
+
+    .account-icon {
+        color: var(--color-bg);
+        font-size: 30px ;
+    }
+
+}
+

@@ -23,7 +23,7 @@ export function Slogan() {
                     </span>
                     <span className='always-container'>
                         Always
-                        <img className='pixel-logo' src="/pixelLogo.svg" alt="Pixel Logo" />
+                        <img src="/pixelLogo.svg" alt="Pixel Logo" />
                     </span>
                 </span>
             </h1>

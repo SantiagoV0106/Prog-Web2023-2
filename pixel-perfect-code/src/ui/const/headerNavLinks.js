@@ -12,7 +12,7 @@ const headerNavLinks = [
     {
         id : 3,
         title : 'Log In',
-        path : '/login'
+        path : '/dev/login'
     }
 ]
 

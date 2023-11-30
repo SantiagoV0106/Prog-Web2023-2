@@ -1,9 +1,25 @@
 :root {
     font-family: 'Lato', sans-serif;
-    background-color: #080808;
-    color: #F8F9FA;
+    color: var(--color-text);
+   
+    /* color: #F8F9FA; */
+
+
+    /* variable colors */
+	
+    --color-bg : #080808;
+    --color-accent : #1282F3;
+    --color-text : #F8F9FA;
+
+    /* Button colors */
+
+    --button-primary : #2F91F4;
+    --button-secondary : #031C35;
+
+
 }
 
 body {
     margin: 0;
+    background-color: var(--color-bg);
 }

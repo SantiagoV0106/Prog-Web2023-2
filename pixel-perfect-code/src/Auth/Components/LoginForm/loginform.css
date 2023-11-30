@@ -1,6 +1,7 @@
-.login-container{
+.login-container {
     display: flex;
-    padding: 60px 100px;
+    height: 100vh;
+    margin: 0 180px;
     align-items: center;
     justify-content: space-between;
 }
@@ -9,37 +10,74 @@
     display: flex;
     flex-direction: column;
 }
+
 .left-container img {
     width: 80%;
-    min-width: 30%;
+    margin: 0 0 10px;
 }
+
+.left-container span {
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 60px;
+}
+
+.login-title {
+    font-size: 24px;
+    font-weight: 500;
+}
+
 .left-container form {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    width: 500px;
+}
+
+.input-login {
+    background-color: transparent;
+    border: 1px solid var(--color-text);
+    border-radius: 10px;
+    padding: 20px 25px;
+    margin-bottom: 20px;
+    color: var(--color-text);
+    font-size: 18px;
+}
+
+#forgot-pass {
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 20px;
 }
 
 .button-submit {
-    width: 500px;
-    height: 60px;
-    background-color: #fff;
+    background-color: var(--button-secondary);
     border-radius: 10px;
-    border: none;
+    padding: 18px 0;
+    border: 1px solid var(--button-primary);
+    color: var(--color-text);
+    font-size: 16px;
+    font-weight: 500;
 }
 
-.right-container { 
+.button-submit:hover {
+    cursor: pointer;
+}
+.button-submit:active {
+    background-color: var(--button-primary);
+}
+
+.right-container {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .right-container img {
-    width: 80%;
+    width: 80%
 }
 
 @media (max-width : 1440px) {
     .right-container img {
-        width: 70%;
-        min-width: 30%;
+        min-width: 50%;
     }
 }

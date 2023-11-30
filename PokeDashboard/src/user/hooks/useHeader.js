@@ -8,7 +8,7 @@ export const useHeader = () => {
     const handleOnClick = () => {
       console.log('click');
       logOut()
-     navigate('/login')
+     navigate('/')
     }
     
 

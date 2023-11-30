@@ -1,14 +1,219 @@
 .upload-section {
+
     display: flex;
     align-items: center;
-    padding: 20px 100px;
     justify-content: space-between;
-    height: 70vh;
+    height: 80vh;
+    margin: 0 180px;
+
+}
+
+.datos-container {
+    width: fit-content;
+}
+
+.datos-container h1  {
+   font-size: 50px;
+   margin: 0 0 40px;
 }
 
 .datos-container form {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap : 25px;
+    width: 450px;
+    gap : 20px;
 }
+
+.inputs-upload { 
+    background-color: transparent;
+    border: 1px solid var(--color-text);
+    border-radius: 10px;
+    padding: 20px 25px;
+    width: calc(100% - 10px );
+    color: var(--color-text);
+    font-size: 18px;
+}
+
+#project-desc{
+    background-color: transparent;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    color: var(--color-text);
+    border: 1px solid var(--color-text);
+    font-family: 'Lato', sans-serif; 
+    font-size: 18px;
+}
+
+#project-desc::placeholder {
+    font-size: 18px;
+    font-family: 'Lato', sans-serif;
+}
+
+.upload-btn {
+    cursor: pointer;
+    background-color: var(--button-secondary);
+    border: 1px solid var(--button-primary);
+    border-radius: 10px;
+    padding: 15px 45px;
+    color: var(--color-text);
+    font-size: 16px;
+    font-weight: 500;
+
+}
+
+.file-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 60%;
+}
+
+
+.upload-inp-label {
+    border: 2px dashed var(--button-primary);
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 80px;
+    color: var(--button-primary);
+    cursor: pointer;
+}
+.upload-inp-label p{
+    font-size: 24px;
+    border-bottom: 1px solid var(--color-text);
+    color: var(--color-text);
+}
+
+.checkboxes-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.checkbox-wrapper-4 * {
+    box-sizing: border-box;
+    color: var(--color-text);
+  }
+  
+  .checkbox-wrapper-4 .cbx {
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    padding: 6px 8px;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: all 0.2s ease;
+    display: inline-block;
+  }
+  
+  .checkbox-wrapper-4 .cbx:not(:last-child) {
+    margin-right: 6px;
+  }
+  
+  .checkbox-wrapper-4 .cbx:hover {
+    background: rgba(0,119,255,0.06);
+  }
+  
+  .checkbox-wrapper-4 .cbx span {
+    float: left;
+    vertical-align: middle;
+    transform: translate3d(0, 0, 0);
+  }
+  
+  .checkbox-wrapper-4 .cbx span:first-child {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    transform: scale(1);
+    border: 1px solid var(--color-text);
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 1px rgba(0,16,75,0.05);
+  }
+  
+  .checkbox-wrapper-4 .cbx span:first-child svg {
+    position: absolute;
+    top: 3px;
+    left: 2px;
+    fill: none;
+    stroke: var(--color-text);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 16px;
+    stroke-dashoffset: 16px;
+    transition: all 0.3s ease;
+    transition-delay: 0.1s;
+    transform: translate3d(0, 0, 0);
+  }
+  
+  .checkbox-wrapper-4 .cbx span:last-child {
+    padding-left: 8px;
+    line-height: 18px;
+  }
+  
+  .checkbox-wrapper-4 .cbx:hover span:first-child {
+    border-color: var(--button-primary);
+  }
+  
+  .checkbox-wrapper-4 .inp-cbx {
+    position: absolute;
+    visibility: hidden;
+  }
+  
+  .checkbox-wrapper-4 .inp-cbx:checked + .cbx span:first-child {
+    background: var(--button-primary);
+    border-color: var(--button-primary);
+    animation: wave-4 0.4s ease;
+  }
+  
+  .checkbox-wrapper-4 .inp-cbx:checked + .cbx span:first-child svg {
+    stroke-dashoffset: 0;
+  }
+  
+  .checkbox-wrapper-4 .inline-svg {
+    position: absolute;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    user-select: none;
+  }
+  
+  @media screen and (max-width: 640px) {
+    .checkbox-wrapper-4 .cbx {
+      width: 100%;
+      display: inline-block;
+    }
+  }
+  
+  @-moz-keyframes wave-4 {
+    50% {
+      transform: scale(0.9);
+    }
+  }
+  
+  @-webkit-keyframes wave-4 {
+    50% {
+      transform: scale(0.9);
+    }
+  }
+  
+  @-o-keyframes wave-4 {
+    50% {
+      transform: scale(0.9);
+    }
+  }
+  
+  @keyframes wave-4 {
+    50% {
+      transform: scale(0.9);
+    }
+  }

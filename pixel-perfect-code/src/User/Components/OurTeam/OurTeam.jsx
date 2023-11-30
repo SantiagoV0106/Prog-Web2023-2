@@ -11,14 +11,12 @@ export function OurTeam() {
                     </span>
                 </h2>
                 <p className='desc-text'>
-                    Our multidisciplinary team
-                    excels in crafting intuitive interfaces and conducting
-                    in-depth user research to guide our design decisions.
+                Our <b> multidisciplinary team </b> excels in crafting intuitive interfaces and conducting in-depth user research. 
                 </p>
             </div>
             <div className="images-container">
                 {
-                    teamCardInfo.map(({ id, name, img, alt, fullName, rol }) => {
+                    teamCardInfo.map(({ id, name, img, alt }) => {
                         return (
                             <div key={id} className="img-container">
                                 <img src={img} alt={alt} />

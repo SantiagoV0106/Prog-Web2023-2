@@ -5,13 +5,101 @@
     height: 77vh;
     justify-content: space-between;
 }
-.title-contactus-container h1{
-margin: 0;
-font-size: 95px;
+
+.title-contactus-container h1 {
+    margin: 0;
+    font-size: 95px;
 }
-.form-contianer form{
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    align-items: flex-end;
+
+.contact-us-form {
+    margin: 0 40px;
+    padding: 10px 30px
+}
+
+.contact-us-form input {
+    background-color: transparent;
+    border: 0.8px solid var(--color-text);
+    color: var(--color-text);
+    margin: 10px auto;
+}
+
+.contact-us-form input::placeholder {
+    color: var(--color-text);
+    font-size: 18px;
+    font-family: 'Lato', sans-serif;
+}
+
+#brief {
+    background-color: transparent;
+    border-radius: 4px;
+    color: var(--color-text);
+    border: 1px solid var(--color-text);
+    font-family: 'Lato', sans-serif;
+}
+
+#brief::placeholder {
+    color: var(--color-text);
+    font-family: 'Lato', sans-serif;
+}
+
+#btn-contactus {
+    background-color: var(--color-text);
+    border: none;
+    border-radius: 10px;
+    padding: 10px 30px;
+    color: var(--color-bg);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+@media screen and (max-width : 425px) {
+    .contact-us {
+        padding: 0;
+        flex-direction: column;
+        justify-content: center;
+        gap: 50px;
+        height: 90vh;
+    }
+
+    .title-contactus-container h1 {
+        font-size: 50px;
+    }
+
+    .title-contactus-container p {
+        display: none;
+    }
+
+    .contact-us-form {
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    .contact-us-form input {
+        width: calc(100% - 40px);
+        padding: 15px 20px;
+        border-radius: 4px;
+    }
+
+    .contact-us-form input::placeholder {
+        font-size: 14px;
+    }
+
+    #brief {
+        width: calc(100% - 20px);
+        margin: 10px auto;
+        padding: 10px;
+    }
+
+    
+#brief::placeholder {
+    font-size: 14px;
+}
+
+#btn-contactus {
+
+    padding: 10px 30px;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
 }

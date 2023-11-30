@@ -10,6 +10,7 @@ export function Values() {
             </p>
             <div className="values-container">
                 <div className="value-container">
+                    <img src="/ranking.png" alt="Excellence" />
                     <h2>
                         Excellence
                     </h2>
@@ -21,6 +22,7 @@ export function Values() {
 
 
                 <div className="value-container">
+                <img src="/message-favorite.png" alt="Honesty" />
                     <h2>
                         Honesty
                     </h2>
@@ -31,6 +33,7 @@ export function Values() {
 
 
                 <div className="value-container">
+                <img src="/user-tick.png" alt="User" />
                     <h2>
                         Responsibility
                     </h2>
